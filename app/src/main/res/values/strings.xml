@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RecipeQuiz</string>
+    <string name="hello">Bonjour</string>
+    <string name="todo">TODO</string>
+    <string name="se_connecter_ou_s_inscrire">Se connecter ou s\'inscrire</string>
+    <string-array name="mealType">
+        <item>Entrée</item>
+        <item>Plat</item>
+        <item>Dessert</item>
+    </string-array>
+</resources>

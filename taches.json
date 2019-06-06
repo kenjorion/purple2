@@ -1,0 +1,19 @@
+{
+  "taches": {
+    "Tache 1" : {
+      "id": "1",
+      "label": "tache 1",
+      "status": "admin"
+    },
+    "Tache 2" : {
+      "id": "2",
+      "label": "tache 2",
+      "status": "user"
+    },
+    " Tache 3" : {
+      "id": "3",
+      "label": "tache 3",
+      "status": "admin"
+    }
+  }
+}
