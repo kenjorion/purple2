@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">723603077350-6p099k6pfits015qqno1p3msu875ku04.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://purple-firebase-exemple.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">723603077350</string>
+    <string name="google_api_key" translatable="false">AIzaSyAbY_iy-MvpEL_YLgh65v8J1JC73fJqOC8</string>
+    <string name="google_app_id" translatable="false">1:723603077350:android:583d52ff37f9ef2a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAbY_iy-MvpEL_YLgh65v8J1JC73fJqOC8</string>
+    <string name="google_storage_bucket" translatable="false">purple-firebase-exemple.appspot.com</string>
+    <string name="project_id" translatable="false">purple-firebase-exemple</string>
+</resources>
