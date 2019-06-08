@@ -44,9 +44,9 @@
             android:id="@+id/button_logout"
             style='style="?android:attr/buttonBarButtonStyle" '
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="90dp"
             android:fontFamily="@font/allerta"
             android:hapticFeedbackEnabled="false"
             android:text="@string/se_deconnect"
@@ -78,7 +78,7 @@
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="165dp"
         android:text="@string/user_name"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="parent"
@@ -105,6 +105,14 @@
         android:layout_marginStart="130dp"
         android:text="@string/liste_des_recettes"
         android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/allerta"
+        android:text="@string/mes_recettes_mes_recettes_d_bloqu_es"
+        android:textSize="12sp" />
 
     <LinearLayout
         android:layout_width="match_parent"

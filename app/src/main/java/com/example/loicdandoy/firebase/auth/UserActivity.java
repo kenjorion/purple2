@@ -17,8 +17,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.loicdandoy.firebase.ItemClickSupport;
@@ -73,6 +76,8 @@ public class UserActivity extends AppCompatActivity {
         if(!isUserLogin()){signOut();}
         setContentView(R.layout.userprofile);
         firebaseAuth = FirebaseAuth.getInstance();
+        Switch switch1 =(Switch)findViewById(R.id.switch1);
+
 
         //1 - Configuring Toolbar
         this.configureToolbar();
@@ -85,37 +90,73 @@ public class UserActivity extends AppCompatActivity {
         mAdapter = new MyAdapter(myDataSet, Glide.with(this));
         recyclerView.setAdapter(mAdapter);
 
-        DatabaseReference ezzeearnRef = FirebaseDatabase.getInstance().getReference("Recipes");
+
+        //switch1
+        final DatabaseReference ezzeearnRef = FirebaseDatabase.getInstance().getReference("Recipes");
         final String uid = firebaseAuth.getCurrentUser().getUid();
 
+        //switch2
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("Recipes");
 
-        ezzeearnRef.addValueEventListener(new ValueEventListener() {
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                myDataSet.clear();
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    Recipe recipe = ds.getValue(Recipe.class);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                    if ( uid.equals(recipe.userId)  ){
+                if (!isChecked){
+                    ezzeearnRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            myDataSet.clear();
+                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                                Recipe recipe = ds.getValue(Recipe.class);
 
-                        myDataSet.add(recipe);
-                        Log.d("FireBase", recipe.name );
+                                if (uid.equals(recipe.userId)) {
 
-                    }
-//                    Recipe recipe = ds.getValue(Recipe.class);
-//
-//                    myDataSet.add(recipe);
-//                    Log.d("FireBase", recipe.name );
+                                    myDataSet.add(recipe);
+                                    Log.d("FireBase", recipe.name);
+
+                                }
+                                //                    Recipe recipe = ds.getValue(Recipe.class);
+                                //
+                                //                    myDataSet.add(recipe);
+                                //                    Log.d("FireBase", recipe.name );
+                            }
+                            mAdapter.notifyDataSetChanged();
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+                            // Failed to read value
+                            Log.w("FireBase", "Failed to read value.", error.toException());
+                        }
+                    });
+            }
+                else {
+                    myRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            myDataSet.clear();
+                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+                                Recipe recipe = ds.getValue(Recipe.class);
+                                myDataSet.add(recipe);
+                                mAdapter.notifyDataSetChanged();
+
+                                Log.d("FireBase", recipe.name );
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+                            // Failed to read value
+                            Log.w("FireBase", "Failed to read value.", error.toException());
+                        }
+                    });
                 }
-                mAdapter.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("FireBase", "Failed to read value.", error.toException());
-            }
-        });
+    }
+});
 
 
         // Configure item click on RecyclerView

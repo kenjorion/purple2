@@ -3938,7 +3938,7 @@
         <item>Entrée</item>
         <item>Plat</item>
         <item>Dessert</item>
-    </string-array><string name="supp_le_compte">supp_le_compte</string><string name="user_name">user_name</string><string name="se_deconnect">se déconnecter</string><string name="liste_des_recettes">Liste des recettes</string><string name="se_connecter">se_connecter</string><string name="se_d_connecter">Se déconnecter</string><string name="supprimer_le_compt">supprimer le compte</string><string name="img">img</string></file><file path="C:\Users\Kenjo\AndroidStudioProjects\AndroidFirebase3\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </string-array><string name="supp_le_compte">supp_le_compte</string><string name="user_name">user_name</string><string name="se_deconnect">se déconnecter</string><string name="liste_des_recettes">Liste des recettes</string><string name="se_connecter">se_connecter</string><string name="se_d_connecter">Se déconnecter</string><string name="supprimer_le_compt">supprimer le compte</string><string name="img">img</string><string name="mes_recettes_mes_recettes_d_bloqu_es">Mes recettes / Mes recettes débloquées</string></file><file path="C:\Users\Kenjo\AndroidStudioProjects\AndroidFirebase3\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

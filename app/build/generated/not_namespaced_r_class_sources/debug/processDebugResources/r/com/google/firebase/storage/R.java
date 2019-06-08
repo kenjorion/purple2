@@ -153,11 +153,11 @@ public final class R {
         public static final int right_side = 0x7f0a00c1;
         public static final int standard = 0x7f0a00ed;
         public static final int status_bar_latest_event_content = 0x7f0a00ef;
-        public static final int text = 0x7f0a00f7;
-        public static final int text2 = 0x7f0a00f8;
-        public static final int time = 0x7f0a010b;
-        public static final int title = 0x7f0a010c;
-        public static final int wide = 0x7f0a0129;
+        public static final int text = 0x7f0a00f8;
+        public static final int text2 = 0x7f0a00f9;
+        public static final int time = 0x7f0a010c;
+        public static final int title = 0x7f0a010d;
+        public static final int wide = 0x7f0a012a;
     }
     public static final class integer {
         private integer() {}
@@ -206,7 +206,7 @@ public final class R {
         public static final int common_open_on_phone = 0x7f11003b;
         public static final int common_signin_button_text = 0x7f11003c;
         public static final int common_signin_button_text_long = 0x7f11003d;
-        public static final int status_bar_notification_info_overflow = 0x7f1100b9;
+        public static final int status_bar_notification_info_overflow = 0x7f1100ba;
     }
     public static final class style {
         private style() {}

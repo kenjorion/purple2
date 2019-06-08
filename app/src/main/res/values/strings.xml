@@ -11,6 +11,7 @@
     <string name="liste_des_recettes">Liste des recettes</string>
     <string name="se_deconnect">se déconnecter</string>
     <string name="supprimer_le_compt">supprimer le compte</string>
+    <string name="mes_recettes_mes_recettes_d_bloqu_es">Mes recettes / Mes recettes débloquées</string>
     <string-array name="mealType">
         <item>Entrée</item>
         <item>Plat</item>

@@ -1379,6 +1379,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id switch1
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1728,6 +1729,7 @@ string hello
 string hide_bottom_view_on_scroll_behavior
 string img
 string liste_des_recettes
+string mes_recettes_mes_recettes_d_bloqu_es
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
 string path_password_eye
