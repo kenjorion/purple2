@@ -9,3 +9,6 @@ This is a recipe app in android java language, that require a quizz to complete 
 - Search bar for the differents recipes available
 
 ![alt text](https://kenjorion.github.io/img/1.png)
+
+
+![alt text](https://kenjorion.github.io/img/2.png)
