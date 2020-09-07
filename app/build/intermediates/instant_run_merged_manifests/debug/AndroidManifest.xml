@@ -32,15 +32,77 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.loicdandoy.firebase.MainActivity" >
+        </activity>
         <activity
-            android:name="com.example.loicdandoy.firebase.MainActivity"
-            android:label="Détail"
-            android:parentActivityName="com.example.loicdandoy.firebase.LoginActivity" >
+            android:name="com.example.loicdandoy.firebase.auth.UserActivity"
+            android:label="Page profil"
+            android:parentActivityName="com.example.loicdandoy.firebase.MainActivity" >
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.loicdandoy.firebase.LoginActivity" />
+                android:value="com.example.loicdandoy.firebase.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.createQuiz.CreateQuiz1"
+            android:label="Créer votre quiz"
+            android:parentActivityName="com.example.loicdandoy.firebase.NewRecipe" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.NewRecipe" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.createQuiz.CreateQuiz2"
+            android:label="Créer votre quiz"
+            android:parentActivityName="com.example.loicdandoy.firebase.createQuiz.CreateQuiz1" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.createQuiz.CreateQuiz1" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.createQuiz.CreateQuiz3"
+            android:label="Créer votre quiz"
+            android:parentActivityName="com.example.loicdandoy.firebase.createQuiz.CreateQuiz2" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.createQuiz.CreateQuiz2" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.createQuiz.CreateQuiz4"
+            android:label="Créer votre quiz"
+            android:parentActivityName="com.example.loicdandoy.firebase.createQuiz.CreateQuiz3" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.createQuiz.CreateQuiz3" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.createQuiz.AddQuizRecipe"
+            android:label="Créer votre quiz"
+            android:parentActivityName="com.example.loicdandoy.firebase.createQuiz.CreateQuiz4" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.createQuiz.CreateQuiz4" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.DoQuiz"
+            android:label="Quiz"
+            android:parentActivityName="com.example.loicdandoy.firebase.MainActivity" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
         <activity
             android:name="com.example.loicdandoy.firebase.PageDetail"
@@ -55,6 +117,16 @@
         <activity
             android:name="com.example.loicdandoy.firebase.NewRecipe"
             android:label="Créer une recette"
+            android:parentActivityName="com.example.loicdandoy.firebase.MainActivity" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.loicdandoy.firebase.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.ResultQuiz"
+            android:label="Votre résultat"
             android:parentActivityName="com.example.loicdandoy.firebase.MainActivity" >
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->

@@ -16,9 +16,9 @@ import java.lang.Override;
 public class NewRecipe_ViewBinding implements Unbinder {
   private NewRecipe target;
 
-  private View view2131296301;
-
   private View view2131296302;
+
+  private View view2131296304;
 
   @UiThread
   public NewRecipe_ViewBinding(NewRecipe target) {
@@ -36,7 +36,7 @@ public class NewRecipe_ViewBinding implements Unbinder {
     target.addTextTime = Utils.findRequiredViewAsType(source, R.id.editTextTime, "field 'addTextTime'", EditText.class);
     target.mSpinner = Utils.findRequiredViewAsType(source, R.id.spinnerType, "field 'mSpinner'", Spinner.class);
     view = Utils.findRequiredView(source, R.id.buttonAddImgRecipe, "method 'onClickAddFile'");
-    view2131296301 = view;
+    view2131296302 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -44,7 +44,7 @@ public class NewRecipe_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.buttonCreateRecipe, "method 'createRecipe'");
-    view2131296302 = view;
+    view2131296304 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,9 +66,9 @@ public class NewRecipe_ViewBinding implements Unbinder {
     target.addTextTime = null;
     target.mSpinner = null;
 
-    view2131296301.setOnClickListener(null);
-    view2131296301 = null;
     view2131296302.setOnClickListener(null);
     view2131296302 = null;
+    view2131296304.setOnClickListener(null);
+    view2131296304 = null;
   }
 }

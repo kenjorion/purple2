@@ -1,7 +1,10 @@
 package com.example.loicdandoy.firebase;
 
 
-public class Recipe {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Recipe implements Parcelable {
 
     public String name;
     public String description;
@@ -30,4 +33,49 @@ public class Recipe {
 
     }
 
+    protected Recipe(Parcel in) {
+        name = in.readString();
+        description = in.readString();
+        recipeImg = in.readString();
+        username = in.readString();
+        userId = in.readString();
+        quizId = in.readString();
+        meal_type = in.readString();
+        recipeTime = in.readString();
+        recipeDate = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeString(recipeImg);
+        dest.writeString(username);
+        dest.writeString(userId);
+        dest.writeString(quizId);
+        dest.writeString(meal_type);
+        dest.writeString(recipeTime);
+        dest.writeString(recipeDate);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Recipe> CREATOR = new Creator<Recipe>() {
+        @Override
+        public Recipe createFromParcel(Parcel in) {
+            return new Recipe(in);
+        }
+
+        @Override
+        public Recipe[] newArray(int size) {
+            return new Recipe[size];
+        }
+    };
+
+    public String getQuizId() {
+        return quizId;
+    }
 }

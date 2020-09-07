@@ -19,14 +19,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
+import com.example.loicdandoy.firebase.createQuiz.CreateQuiz1;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -43,14 +37,10 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class NewRecipe extends AppCompatActivity {
 
+    FirebaseAuth firebaseAuth;
+
+    //RECETTE
     Recipe addRecipe = new Recipe();
-
-    // Firebase
-    private DatabaseReference mDatabase;
-
-    //Firebase
-    FirebaseStorage storage;
-    StorageReference storageReference;
 
     // STATIC DATA FOR PICTURE
     private static final String PERMS = Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -85,12 +75,11 @@ public class NewRecipe extends AppCompatActivity {
         // Configuring Toolbar
         this.configureToolbar();
 
-        //Connection base de donnée
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        firebaseAuth = FirebaseAuth.getInstance();
+        addRecipe.userId = firebaseAuth.getCurrentUser().getUid();
+        addRecipe.username = firebaseAuth.getCurrentUser().getDisplayName();
 
-        storage = FirebaseStorage.getInstance();
-        storageReference = storage.getReference();
-
+        // Spinner
         strings = getResources().getStringArray(R.array.mealType);
         items = new ArrayList<CharSequence>(Arrays.asList(strings));
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
@@ -143,27 +132,26 @@ public class NewRecipe extends AppCompatActivity {
 
     @OnClick(R.id.buttonCreateRecipe)
     public void createRecipe() {
-        String recipeId = UUID.randomUUID().toString();
 
-        String userId ="jeremyzorgui@gmail.com";
-        String username ="Jérémy";
-        String quizId = UUID.randomUUID().toString();
+        addRecipe.quizId = UUID.randomUUID().toString();
 
         Date date = new Date();
-        String recipeDate = DateFormat.getDateTimeInstance().format(date);
+        addRecipe.recipeDate = DateFormat.getDateTimeInstance().format(date);
 
-        String name = addTextName.getText().toString();
-        String description = addTextDescription.getText().toString();
-        String recipeTime = addTextTime.getText().toString();
-        String meal_type = addRecipe.meal_type;
+        addRecipe.name = addTextName.getText().toString();
+        addRecipe.description = addTextDescription.getText().toString();
+        addRecipe.recipeTime = addTextTime.getText().toString();
 
-        if(TextUtils.isEmpty(name) || TextUtils.isEmpty(description) || TextUtils.isEmpty(recipeTime) || this.imageViewPreview.getDrawable() == null) {
+        if(TextUtils.isEmpty(addRecipe.name) || TextUtils.isEmpty(addRecipe.description) || TextUtils.isEmpty(addRecipe.recipeTime) || uriImageSelected == null) {
             Toast.makeText(this, "Il faut remplir tous les champs !", Toast.LENGTH_LONG).show();
             return;
+        } else {
+            //lance la création du Quizz
+            Intent intent = new Intent(getApplicationContext(), CreateQuiz1.class);
+            intent.putExtra("recipe", addRecipe);
+            intent.putExtra("imageUri", uriImageSelected);
+            startActivity(intent);
         }
-        //addImgNewRecipe(recipeId, id, name, description);
-        uploadImage(recipeId, name, description, meal_type, recipeDate, recipeTime, username, userId, quizId);
-        Toast.makeText(this, "Recette ajoutée !!", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -201,45 +189,4 @@ public class NewRecipe extends AppCompatActivity {
         }
     }
 
-    // --------------------
-    // REST REQUESTS
-    // --------------------
-
-    private void uploadImage(final String recipeId, final String name, final String description, final String meal_type, final String recipeDate, final String recipeTime, final String username, final String userId, final String quizId) {
-
-        if(uriImageSelected != null)
-        {
-
-            final StorageReference ref = storageReference.child("img_recipes/"+ UUID.randomUUID().toString());
-            ref.putFile(uriImageSelected)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            ref.getDownloadUrl()
-                                    .addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                      @Override
-                                      public void onSuccess(Uri uri) {
-                                          // uri is your download path
-                                          String pathImageSavedInFirebase = uri.toString();
-                                          Recipe newRecipe = new Recipe(name, description, pathImageSavedInFirebase, username, userId, quizId, meal_type, recipeTime, recipeDate);
-                                          mDatabase.child("Recipes").child(recipeId).setValue(newRecipe);
-                                          Toast.makeText(getApplicationContext(), "Uploaded", Toast.LENGTH_SHORT).show();
-                                      }
-                            });
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(getApplicationContext(), "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                            Toast.makeText(getApplicationContext(), "In progress...", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        }
-    }
 }

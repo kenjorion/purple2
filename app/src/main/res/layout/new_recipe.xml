@@ -19,9 +19,11 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="15dp"
                     android:layout_weight="1"
-                    android:text="Titre :" />
+                    android:text="Titre :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextName"
@@ -29,7 +31,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
         </LinearLayout>
 
@@ -41,18 +44,21 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:text="Description :" />
+                    android:text="Description :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextDescription"
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="start|top"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
         </LinearLayout>
 
@@ -64,8 +70,11 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:layout_weight="1"
-                    android:text="Durée :" />
+                    android:text="Durée en minutes :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextTime"
@@ -73,7 +82,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="time" />
+                    android:inputType="time"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,8 +94,11 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:layout_weight="1"
-                    android:text="Type :" />
+                    android:text="Type :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
 
 
                 <Spinner
@@ -98,15 +111,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp">
 
 
                 <ImageView
                     android:id="@+id/imageViewRecipeImg"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
-                    android:scaleType="center"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="center" />
         </LinearLayout>
 
         <LinearLayout
@@ -117,8 +133,14 @@
                     android:id="@+id/buttonAddImgRecipe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="Ajouter une image" />
+                    android:background="@color/colorAccent"
+                    android:text="Ajouter une image"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
         </LinearLayout>
 
         <LinearLayout
@@ -129,8 +151,12 @@
                     android:id="@+id/buttonCreateRecipe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_weight="1"
-                    android:text="Créer ma recette" />
+                    android:background="@color/colorAccent"
+                    android:text="Créer ma recette"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
         </LinearLayout>
 
 </LinearLayout>
