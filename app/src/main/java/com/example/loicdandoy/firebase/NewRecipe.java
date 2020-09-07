@@ -19,8 +19,19 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+<<<<<<< HEAD
 import com.example.loicdandoy.firebase.createQuiz.CreateQuiz1;
 import com.google.firebase.auth.FirebaseAuth;
+=======
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -37,11 +48,23 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class NewRecipe extends AppCompatActivity {
 
+<<<<<<< HEAD
     FirebaseAuth firebaseAuth;
 
     //RECETTE
     Recipe addRecipe = new Recipe();
 
+=======
+    Recipe addRecipe = new Recipe();
+
+    // Firebase
+    private DatabaseReference mDatabase;
+
+    //Firebase
+    FirebaseStorage storage;
+    StorageReference storageReference;
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     // STATIC DATA FOR PICTURE
     private static final String PERMS = Manifest.permission.READ_EXTERNAL_STORAGE;
     private static final int RC_IMAGE_PERMS = 100;
@@ -75,11 +98,20 @@ public class NewRecipe extends AppCompatActivity {
         // Configuring Toolbar
         this.configureToolbar();
 
+<<<<<<< HEAD
         firebaseAuth = FirebaseAuth.getInstance();
         addRecipe.userId = firebaseAuth.getCurrentUser().getUid();
         addRecipe.username = firebaseAuth.getCurrentUser().getDisplayName();
 
         // Spinner
+=======
+        //Connection base de donnée
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         strings = getResources().getStringArray(R.array.mealType);
         items = new ArrayList<CharSequence>(Arrays.asList(strings));
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
@@ -132,6 +164,7 @@ public class NewRecipe extends AppCompatActivity {
 
     @OnClick(R.id.buttonCreateRecipe)
     public void createRecipe() {
+<<<<<<< HEAD
 
         addRecipe.quizId = UUID.randomUUID().toString();
 
@@ -152,6 +185,29 @@ public class NewRecipe extends AppCompatActivity {
             intent.putExtra("imageUri", uriImageSelected);
             startActivity(intent);
         }
+=======
+        String recipeId = UUID.randomUUID().toString();
+
+        String userId ="jeremyzorgui@gmail.com";
+        String username ="Jérémy";
+        String quizId = UUID.randomUUID().toString();
+
+        Date date = new Date();
+        String recipeDate = DateFormat.getDateTimeInstance().format(date);
+
+        String name = addTextName.getText().toString();
+        String description = addTextDescription.getText().toString();
+        String recipeTime = addTextTime.getText().toString();
+        String meal_type = addRecipe.meal_type;
+
+        if(TextUtils.isEmpty(name) || TextUtils.isEmpty(description) || TextUtils.isEmpty(recipeTime) || this.imageViewPreview.getDrawable() == null) {
+            Toast.makeText(this, "Il faut remplir tous les champs !", Toast.LENGTH_LONG).show();
+            return;
+        }
+        //addImgNewRecipe(recipeId, id, name, description);
+        uploadImage(recipeId, name, description, meal_type, recipeDate, recipeTime, username, userId, quizId);
+        Toast.makeText(this, "Recette ajoutée !!", Toast.LENGTH_LONG).show();
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     }
 
     @Override
@@ -189,4 +245,48 @@ public class NewRecipe extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
+=======
+    // --------------------
+    // REST REQUESTS
+    // --------------------
+
+    private void uploadImage(final String recipeId, final String name, final String description, final String meal_type, final String recipeDate, final String recipeTime, final String username, final String userId, final String quizId) {
+
+        if(uriImageSelected != null)
+        {
+
+            final StorageReference ref = storageReference.child("img_recipes/"+ UUID.randomUUID().toString());
+            ref.putFile(uriImageSelected)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            ref.getDownloadUrl()
+                                    .addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                      @Override
+                                      public void onSuccess(Uri uri) {
+                                          // uri is your download path
+                                          String pathImageSavedInFirebase = uri.toString();
+                                          Recipe newRecipe = new Recipe(name, description, pathImageSavedInFirebase, username, userId, quizId, meal_type, recipeTime, recipeDate);
+                                          mDatabase.child("Recipes").child(recipeId).setValue(newRecipe);
+                                          Toast.makeText(getApplicationContext(), "Uploaded", Toast.LENGTH_SHORT).show();
+                                      }
+                            });
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(), "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            Toast.makeText(getApplicationContext(), "In progress...", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
+    }
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 }

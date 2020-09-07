@@ -33,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name="com.example.loicdandoy.firebase.MainActivity" >
         </activity>
         <activity
@@ -79,10 +80,17 @@
             android:name="com.example.loicdandoy.firebase.createQuiz.CreateQuiz4"
             android:label="Créer votre quiz"
             android:parentActivityName="com.example.loicdandoy.firebase.createQuiz.CreateQuiz3" >
+=======
+        <activity
+            android:name="com.example.loicdandoy.firebase.MainActivity"
+            android:label="Liste des recettes"
+            android:parentActivityName="com.example.loicdandoy.firebase.LoginActivity" >
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
+<<<<<<< HEAD
                 android:value="com.example.loicdandoy.firebase.createQuiz.CreateQuiz3" />
         </activity>
         <activity
@@ -98,6 +106,13 @@
         <activity
             android:name="com.example.loicdandoy.firebase.DoQuiz"
             android:label="Quiz"
+=======
+                android:value="com.example.loicdandoy.firebase.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.PageDetail"
+            android:label="Détail"
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
             android:parentActivityName="com.example.loicdandoy.firebase.MainActivity" >
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -106,8 +121,13 @@
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="com.example.loicdandoy.firebase.PageDetail"
             android:label="Détail"
+=======
+            android:name="com.example.loicdandoy.firebase.auth.UserActivity"
+            android:label="Profil"
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
             android:parentActivityName="com.example.loicdandoy.firebase.MainActivity" >
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -125,6 +145,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
+<<<<<<< HEAD
         <activity
             android:name="com.example.loicdandoy.firebase.ResultQuiz"
             android:label="Votre résultat"
@@ -135,6 +156,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
+=======
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         <activity
             android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
             android:exported="false"
@@ -333,10 +361,13 @@
             android:authorities="com.example.loicdandoy.firebase.lifecycle-trojan"
             android:exported="false"
             android:multiprocess="true" />
+<<<<<<< HEAD
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.example.loicdandoy.firebase.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     </application>
 
 </manifest>

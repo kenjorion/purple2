@@ -22,6 +22,7 @@ public class PageDetail extends AppCompatActivity {
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
+<<<<<<< HEAD
         Recipe recipe = intent.getParcelableExtra("recipe");
 
         String name = recipe.name;
@@ -31,13 +32,18 @@ public class PageDetail extends AppCompatActivity {
         String description = recipe.description;
         String image = recipe.recipeImg;
         /*
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         String name = intent.getStringExtra(MainActivity.EXTRA_NAME);
         String username = intent.getStringExtra(MainActivity.EXTRA_USERNAME);
         String recipeTime = intent.getStringExtra(MainActivity.EXTRA_RECIPE_TIME);
         String description = intent.getStringExtra(MainActivity.EXTRA_DESCRIPTION);
         String mealType = intent.getStringExtra(MainActivity.EXTRA_MEAL_TYPE);
         String image = intent.getStringExtra(MainActivity.EXTRA_IMAGE);
+<<<<<<< HEAD
         */
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
         // Capture the layout's TextView and set the string as its text
         TextView textViewLabel = findViewById(R.id.textViewName);

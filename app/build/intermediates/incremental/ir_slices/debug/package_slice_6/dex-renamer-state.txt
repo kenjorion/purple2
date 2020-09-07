@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Fri Jun 14 02:18:01 CEST 2019
+=======
+#Thu Jun 06 13:49:52 CEST 2019
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 base.0=/Users/jeremyzorgui/Desktop/AndroidFireBase/app/build/intermediates/transforms/dexMerger/debug/6
 path.0=classes.dex
 renamed.0=classes.dex

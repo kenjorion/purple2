@@ -27,8 +27,16 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+<<<<<<< HEAD
 array Correction
 array mealType
+=======
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array mealType
+array preloaded_fonts
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1108,7 +1116,10 @@ drawable fui_idp_button_background_phone
 drawable fui_idp_button_background_twitter
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+<<<<<<< HEAD
 drawable ic_action_add
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 drawable ic_action_name
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1133,6 +1144,10 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+<<<<<<< HEAD
+=======
+font allerta
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id ALT
 id CTRL
 id FUNCTION
@@ -1156,7 +1171,10 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+<<<<<<< HEAD
 id action_search
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1180,6 +1198,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_holder
 id buttonAddImgRecipe
+<<<<<<< HEAD
 id buttonAddQuestion
 id buttonCreateRecipe
 id buttonLogin
@@ -1189,6 +1208,11 @@ id buttonReponse2
 id buttonReponse3
 id buttonReponse4
 id buttonResult
+=======
+id buttonCreateRecipe
+id buttonLogin
+id buttonPanel
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id button_continue
 id button_create
 id button_delete
@@ -1232,11 +1256,14 @@ id disableHome
 id dynamic
 id editTextDescription
 id editTextName
+<<<<<<< HEAD
 id editTextQuestion
 id editTextResponse1
 id editTextResponse2
 id editTextResponse3
 id editTextResponse4
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id editTextTime
 id edit_phone_number
 id edit_query
@@ -1375,7 +1402,10 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+<<<<<<< HEAD
 id spinnerCorrect
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id spinnerType
 id split_action_bar
 id spread
@@ -1400,11 +1430,15 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+<<<<<<< HEAD
 id textView1
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id textView2
 id textView3
 id textView4
 id textView5
+<<<<<<< HEAD
 id textView6
 id textViewDescription
 id textViewMealType
@@ -1413,6 +1447,12 @@ id textViewQuestion
 id textViewRecipeTime
 id textViewResultat
 id textViewTitle
+=======
+id textViewDescription
+id textViewMealType
+id textViewName
+id textViewRecipeTime
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 id textViewUsername
 id text_input_password_toggle
 id textinput_counter
@@ -1503,9 +1543,12 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+<<<<<<< HEAD
 layout activity_result_quiz
 layout activity_user
 layout add_quiz
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout design_bottom_navigation_item
@@ -1522,7 +1565,10 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+<<<<<<< HEAD
 layout do_quiz
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -1572,6 +1618,10 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout toolbar
+<<<<<<< HEAD
+=======
+layout userprofile
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 menu menu_activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1745,6 +1795,12 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hello
 string hide_bottom_view_on_scroll_behavior
+<<<<<<< HEAD
+=======
+string img
+string liste_des_recettes
+string mes_recettes_mes_recettes_d_bloqu_es
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
 string path_password_eye
@@ -1754,13 +1810,28 @@ string path_password_strike_through
 string project_id
 string rationale_ask
 string rationale_ask_again
+<<<<<<< HEAD
 string se_connecter_ou_s_inscrire
 string search_menu_title
 string status_bar_notification_info_overflow
+=======
+string se_connecter
+string se_connecter_ou_s_inscrire
+string se_d_connecter
+string se_deconnect
+string search_menu_title
+string status_bar_notification_info_overflow
+string supp_le_compte
+string supprimer_le_compt
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 string title_settings_dialog
 string todo
 string twitter_consumer_key
 string twitter_consumer_secret
+<<<<<<< HEAD
+=======
+string user_name
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

@@ -1,10 +1,14 @@
 package com.example.loicdandoy.firebase;
 
 
+<<<<<<< HEAD
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Recipe implements Parcelable {
+=======
+public class Recipe {
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
     public String name;
     public String description;
@@ -33,6 +37,7 @@ public class Recipe implements Parcelable {
 
     }
 
+<<<<<<< HEAD
     protected Recipe(Parcel in) {
         name = in.readString();
         description = in.readString();
@@ -78,4 +83,6 @@ public class Recipe implements Parcelable {
     public String getQuizId() {
         return quizId;
     }
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 }

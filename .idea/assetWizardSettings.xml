@@ -34,7 +34,33 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
+<<<<<<< HEAD
                                                 <entry key="url" value="jar:file:/Applications/Code/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_add_black_24dp.xml" />
+=======
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -44,7 +70,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
+<<<<<<< HEAD
                                       <entry key="outputName" value="ic_action_add" />
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                                       <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
@@ -130,11 +159,14 @@
             </PersistentState>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="vectorWizard">
           <value>
             <PersistentState />
           </value>
         </entry>
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
       </map>
     </option>
   </component>

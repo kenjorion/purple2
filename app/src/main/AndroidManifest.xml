@@ -12,13 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".LoginActivity">
+=======
+        <activity android:name="com.example.loicdandoy.firebase.LoginActivity">
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".auth.UserActivity"
@@ -53,10 +58,17 @@
             android:name=".createQuiz.CreateQuiz3"
             android:label="Créer votre quiz"
             android:parentActivityName=".createQuiz.CreateQuiz2">
+=======
+        <activity
+            android:name="com.example.loicdandoy.firebase.MainActivity"
+            android:label="Liste des recettes"
+            android:parentActivityName="com.example.loicdandoy.firebase.LoginActivity">
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
+<<<<<<< HEAD
                 android:value="com.example.loicdandoy.firebase.createQuiz.CreateQuiz2" />
         </activity>
         <activity
@@ -83,16 +95,32 @@
             android:name=".DoQuiz"
             android:label="Quiz"
             android:parentActivityName=".MainActivity">
+=======
+                android:value="com.example.loicdandoy.firebase.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.example.loicdandoy.firebase.PageDetail"
+            android:label="Détail"
+            android:parentActivityName="com.example.loicdandoy.firebase.MainActivity">
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".PageDetail"
             android:label="Détail"
             android:parentActivityName=".MainActivity">
+=======
+
+        <activity
+            android:name="com.example.loicdandoy.firebase.auth.UserActivity"
+            android:label="Profil"
+            android:parentActivityName="com.example.loicdandoy.firebase.MainActivity">
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -100,15 +128,22 @@
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".NewRecipe"
             android:label="Créer une recette"
             android:parentActivityName=".MainActivity">
+=======
+            android:name="com.example.loicdandoy.firebase.NewRecipe"
+            android:label="Créer une recette"
+            android:parentActivityName="com.example.loicdandoy.firebase.MainActivity">
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".ResultQuiz"
             android:label="Votre résultat"
@@ -119,6 +154,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.loicdandoy.firebase.MainActivity" />
         </activity>
+=======
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     </application>
 
 </manifest>

@@ -19,11 +19,17 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginStart="15dp"
                     android:layout_weight="1"
                     android:text="Titre :"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
+=======
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="Titre :" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
                 <EditText
                     android:id="@+id/editTextName"
@@ -31,8 +37,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+<<<<<<< HEAD
                     android:inputType="textPersonName"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+=======
+                    android:inputType="textPersonName" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
         </LinearLayout>
 
@@ -44,21 +54,35 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="Description :"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
+=======
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="Description :" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
                 <EditText
                     android:id="@+id/editTextDescription"
                     android:layout_width="wrap_content"
+<<<<<<< HEAD
                     android:layout_height="150dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="start|top"
                     android:inputType="textMultiLine"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+=======
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
         </LinearLayout>
 
@@ -70,11 +94,16 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginStart="15dp"
                     android:layout_weight="1"
                     android:text="Durée en minutes :"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
+=======
+                    android:layout_weight="1"
+                    android:text="Durée :" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
                 <EditText
                     android:id="@+id/editTextTime"
@@ -82,8 +111,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+<<<<<<< HEAD
                     android:inputType="time"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+=======
+                    android:inputType="time" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         </LinearLayout>
 
         <LinearLayout
@@ -94,11 +127,16 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginStart="15dp"
                     android:layout_weight="1"
                     android:text="Type :"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
+=======
+                    android:layout_weight="1"
+                    android:text="Type :" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
 
                 <Spinner
@@ -111,18 +149,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:paddingStart="5dp"
             android:paddingTop="5dp"
             android:paddingEnd="5dp">
+=======
+            android:layout_height="wrap_content">
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
 
                 <ImageView
                     android:id="@+id/imageViewRecipeImg"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
+<<<<<<< HEAD
                     android:layout_weight="1"
                     android:scaleType="center" />
+=======
+                    android:scaleType="center"
+                    android:layout_weight="1" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         </LinearLayout>
 
         <LinearLayout
@@ -133,6 +180,7 @@
                     android:id="@+id/buttonAddImgRecipe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
@@ -141,6 +189,10 @@
                     android:background="@color/colorAccent"
                     android:text="Ajouter une image"
                     android:textColor="@color/common_google_signin_btn_text_dark_default" />
+=======
+                    android:layout_weight="1"
+                    android:text="Ajouter une image" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         </LinearLayout>
 
         <LinearLayout
@@ -151,12 +203,17 @@
                     android:id="@+id/buttonCreateRecipe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_weight="1"
                     android:background="@color/colorAccent"
                     android:text="Créer ma recette"
                     android:textColor="@color/common_google_signin_btn_text_dark_default" />
+=======
+                    android:layout_weight="1"
+                    android:text="Créer ma recette" />
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         </LinearLayout>
 
 </LinearLayout>

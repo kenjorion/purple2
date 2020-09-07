@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/jeremyzorgui/Desktop/AndroidFireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/jeremyzorgui/.gradle/caches/transforms-2/files-2.1/3d3b4e81f09760081d1249e65d0633bd/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+=======
+            "outputFile": "C:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\f217b05fe7410e21df94da6488665158\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

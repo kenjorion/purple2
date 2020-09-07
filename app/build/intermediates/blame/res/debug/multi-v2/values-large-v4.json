@@ -1,6 +1,7 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/jeremyzorgui/Desktop/AndroidFireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
@@ -15,6 +16,12 @@
                 },
                 {
                     "source": "/Users/jeremyzorgui/.gradle/caches/transforms-2/files-2.1/228b2773330e540fba9a36ba80a0c3f1/res/values-large-v4/values-large-v4.xml",
+=======
+            "outputFile": "C:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\705c799f0ec601745ddb26d33f374d3e\\res\\values-large-v4\\values-large-v4.xml",
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -29,6 +36,19 @@
                         "endColumns": "121,133",
                         "endOffsets": "869,1003"
                     }
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\d9672395026dd2fa655d04bd5780c586\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    }
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                 }
             ]
         }

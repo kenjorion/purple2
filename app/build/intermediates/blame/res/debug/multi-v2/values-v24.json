@@ -1,10 +1,27 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/jeremyzorgui/Desktop/AndroidFireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/jeremyzorgui/.gradle/caches/transforms-2/files-2.1/adc74c568cb6c90f84238ad49b219c1a/res/values-v24/values-v24.xml",
+=======
+            "outputFile": "C:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\d9672395026dd2fa655d04bd5780c586\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\faf651c0656880faf53c55743a99e6cf\\res\\values-v24\\values-v24.xml",
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -19,6 +36,7 @@
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
                     }
+<<<<<<< HEAD
                 },
                 {
                     "source": "/Users/jeremyzorgui/.gradle/caches/transforms-2/files-2.1/2ace995d8d5bc1fcb28e32321125e2ed/res/values-v24/values-v24.xml",
@@ -29,6 +47,8 @@
                         "endColumns": "156,134",
                         "endOffsets": "207,342"
                     }
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                 }
             ]
         }

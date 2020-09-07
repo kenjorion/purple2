@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/jeremyzorgui/Desktop/AndroidFireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
                     "source": "/Users/jeremyzorgui/.gradle/caches/transforms-2/files-2.1/2ace995d8d5bc1fcb28e32321125e2ed/res/values-v17/values-v17.xml",
+=======
+            "outputFile": "C:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\d9672395026dd2fa655d04bd5780c586\\res\\values-v17\\values-v17.xml",
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

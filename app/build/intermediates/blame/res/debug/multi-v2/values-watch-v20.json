@@ -1,6 +1,7 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/jeremyzorgui/Desktop/AndroidFireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
@@ -22,6 +23,12 @@
                 },
                 {
                     "source": "/Users/jeremyzorgui/.gradle/caches/transforms-2/files-2.1/2ace995d8d5bc1fcb28e32321125e2ed/res/values-watch-v20/values-watch-v20.xml",
+=======
+            "outputFile": "C:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\d9672395026dd2fa655d04bd5780c586\\res\\values-watch-v20\\values-watch-v20.xml",
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -38,6 +45,26 @@
                         "endColumns": "12,12,12",
                         "endOffsets": "869,1040,1213"
                     }
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "source": "C:\\Users\\Kenjo\\.gradle\\caches\\transforms-2\\files-2.1\\8299cd39718d57b3dda128eb479f9643\\res\\values-watch-v20\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "171,246,322,397,472,559,636,723",
+                        "endColumns": "74,75,74,74,86,76,86,75",
+                        "endOffsets": "245,321,396,471,558,635,722,798"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,134,214,293,372,463,544,635",
+                        "endColumns": "78,79,78,78,90,80,90,79",
+                        "endOffsets": "129,209,288,367,458,539,630,710"
+                    }
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                 }
             ]
         }

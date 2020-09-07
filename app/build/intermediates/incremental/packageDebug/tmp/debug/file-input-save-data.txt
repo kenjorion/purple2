@@ -1,4 +1,5 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Thu Jun 06 13:49:53 CEST 2019
 4.path=classes.dex
 8.set=ASSET
@@ -49,3 +50,19 @@ count=12
 0.path=classes.dex
 1.set=DEX
 2.path=classes.dex
+=======
+#Thu Jun 06 15:00:16 CEST 2019
+1.base=C\:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+2.path=crashlytics-build.properties
+0.baseType=DIRECTORY
+2.base=C\:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\merged_assets\\debug\\out
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=C\:\\Users\\Kenjo\\AndroidStudioProjects\\AndroidFirebase3\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+2.baseType=DIRECTORY
+1.path=classes.dex
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf

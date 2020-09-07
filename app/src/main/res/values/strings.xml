@@ -3,15 +3,30 @@
     <string name="hello">Bonjour</string>
     <string name="todo">TODO</string>
     <string name="se_connecter_ou_s_inscrire">Se connecter ou s\'inscrire</string>
+<<<<<<< HEAD
+=======
+    <string name="img">img</string>
+    <string name="se_d_connecter">Se déconnecter</string>
+    <string name="supp_le_compte">supp_le_compte</string>
+    <string name="se_connecter">se_connecter</string>
+    <string name="user_name">user_name</string>
+    <string name="liste_des_recettes">Liste des recettes</string>
+    <string name="se_deconnect">se déconnecter</string>
+    <string name="supprimer_le_compt">supprimer le compte</string>
+    <string name="mes_recettes_mes_recettes_d_bloqu_es">Mes recettes / Mes recettes débloquées</string>
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     <string-array name="mealType">
         <item>Entrée</item>
         <item>Plat</item>
         <item>Dessert</item>
     </string-array>
+<<<<<<< HEAD
     <string-array name="Correction">
         <item>Réponse 1</item>
         <item>Réponse 2</item>
         <item>Réponse 3</item>
         <item>Réponse 4</item>
     </string-array>
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 </resources>

@@ -7,7 +7,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+<<<<<<< HEAD
 import android.support.v7.app.ActionBar;
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,12 +50,25 @@ import com.google.firebase.database.ValueEventListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import static com.example.loicdandoy.firebase.MainActivity.EXTRA_DESCRIPTION;
+import static com.example.loicdandoy.firebase.MainActivity.EXTRA_IMAGE;
+import static com.example.loicdandoy.firebase.MainActivity.EXTRA_MEAL_TYPE;
+import static com.example.loicdandoy.firebase.MainActivity.EXTRA_NAME;
+import static com.example.loicdandoy.firebase.MainActivity.EXTRA_RECIPE_TIME;
+import static com.example.loicdandoy.firebase.MainActivity.EXTRA_USERNAME;
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 public class UserActivity extends AppCompatActivity {
 
     private static final String TAG = UserActivity.class.getSimpleName();
 
+<<<<<<< HEAD
     private DatabaseReference mDatabase;
 
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     private FirebaseAuth auth;
     private TextView profileName;
     private ImageView image_gallery;
@@ -70,11 +86,18 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
         if(!isUserLogin()){signOut();}
+<<<<<<< HEAD
         setContentView(R.layout.activity_user);
         firebaseAuth = FirebaseAuth.getInstance();
         Switch switch1 =(Switch)findViewById(R.id.switch1);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
+=======
+        setContentView(R.layout.userprofile);
+        firebaseAuth = FirebaseAuth.getInstance();
+        Switch switch1 =(Switch)findViewById(R.id.switch1);
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
         //1 - Configuring Toolbar
         this.configureToolbar();
@@ -100,7 +123,11 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+<<<<<<< HEAD
                 if (isChecked){
+=======
+                if (!isChecked){
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                     ezzeearnRef.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -128,6 +155,7 @@ public class UserActivity extends AppCompatActivity {
                             Log.w("FireBase", "Failed to read value.", error.toException());
                         }
                     });
+<<<<<<< HEAD
                 } else {
                     myDataSet.clear();
                     mAdapter.notifyDataSetChanged();
@@ -135,6 +163,34 @@ public class UserActivity extends AppCompatActivity {
 
             }
         });
+=======
+            }
+                else {
+                    myRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            myDataSet.clear();
+                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+                                Recipe recipe = ds.getValue(Recipe.class);
+                                myDataSet.add(recipe);
+                                mAdapter.notifyDataSetChanged();
+
+                                Log.d("FireBase", recipe.name );
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+                            // Failed to read value
+                            Log.w("FireBase", "Failed to read value.", error.toException());
+                        }
+                    });
+                }
+
+    }
+});
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
 
         // Configure item click on RecyclerView
@@ -147,7 +203,23 @@ public class UserActivity extends AppCompatActivity {
                         // afficher page détail
                         //Toast.makeText(getApplicationContext(), "ça marche !"+recipe.name, Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), PageDetail.class);
+<<<<<<< HEAD
                         intent.putExtra("recipe", recipe);
+=======
+                        String name = recipe.name;
+                        String username = recipe.username;
+                        String description = recipe.description;
+                        String recipeTime = recipe.recipeTime;
+                        String image = recipe.recipeImg;
+                        String mealType = recipe.meal_type;
+                        intent.putExtra(EXTRA_NAME, name);
+                        intent.putExtra(EXTRA_USERNAME, username);
+                        intent.putExtra(EXTRA_IMAGE, image);
+                        intent.putExtra(EXTRA_RECIPE_TIME, recipeTime);
+                        intent.putExtra(EXTRA_DESCRIPTION, description);
+                        intent.putExtra(EXTRA_MEAL_TYPE, mealType);
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
                         startActivity(intent);
                     }
                 });
@@ -192,6 +264,29 @@ public class UserActivity extends AppCompatActivity {
                 });
             }
         });
+<<<<<<< HEAD
+=======
+//        ezzeearnRef.addListenerForSingleValueEvent(eventListener);
+
+//        Button main_button = (Button) findViewById(R.id.buttonTest);
+//        main_button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                //lance activité principale
+//                Intent mainActivity = new Intent(UserActivity.this, MainActivity.class);
+//                startActivity(mainActivity);
+//            }
+//        });
+
+//        Button gallery_button = (Button) findViewById(R.id.button_gallery);
+//        gallery_button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                //Ouverture de l'app gallery photo
+//                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//                intent.setType("image/*");
+//                startActivityForResult(intent, 1);}
+//        });
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     }
 
     private boolean isUserLogin(){
@@ -215,13 +310,17 @@ public class UserActivity extends AppCompatActivity {
     }
 
     //Toolbar
+<<<<<<< HEAD
     /*
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //2 - Inflate the menu and add it to the Toolbar
         getMenuInflater().inflate(R.menu.menu_activity_main, menu);
         return true;
     }
+<<<<<<< HEAD
     */
 
     private void configureToolbar(){
@@ -236,6 +335,10 @@ public class UserActivity extends AppCompatActivity {
     }
 /*
     private void configureToolbar(){
+=======
+
+    private void configureToolbar(){
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
         // Get the toolbar view inside the activity layout
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Set the Toolbar
@@ -258,7 +361,10 @@ public class UserActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 
     //Gallery image
     @Override
@@ -293,4 +399,9 @@ public class UserActivity extends AppCompatActivity {
         return cursor.getString(column_index);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf

@@ -12,11 +12,19 @@ public final class R {
     public static final class integer {
         private integer() {}
 
+<<<<<<< HEAD
         public static final int google_play_services_version = 0x7f0a0009;
+=======
+        public static final int google_play_services_version = 0x7f0b0009;
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     }
     public static final class string {
         private string() {}
 
+<<<<<<< HEAD
         public static final int common_google_play_services_unknown_issue = 0x7f100034;
+=======
+        public static final int common_google_play_services_unknown_issue = 0x7f110034;
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     }
 }

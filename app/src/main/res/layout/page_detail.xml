@@ -3,6 +3,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+    xmlns:tools="http://schemas.android.com/tools"
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
     android:orientation="vertical">
 
     <!-- Importation de notre Toolbar -->

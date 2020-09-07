@@ -1,6 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+<<<<<<< HEAD
         android:id="@+id/action_search"
         android:icon="@android:drawable/ic_menu_search"
         android:title="Search"
@@ -16,4 +17,17 @@
         android:icon="@drawable/ic_action_name"
         android:title="User"
         app:showAsAction="ifRoom"></item>
+=======
+        android:id="@+id/menu_activity_main_search"
+        android:icon="@drawable/common_full_open_on_phone"
+        app:showAsAction="ifRoom"
+        android:title="Rechercher">
+    </item>
+    <item
+        android:id="@+id/menu_activity_main_params"
+        android:icon="@drawable/ic_action_name"
+        app:showAsAction="ifRoom"
+        android:title="Paramètres">
+    </item>
+>>>>>>> 4401d053ab236bb9f87992277fe5b71ec1f636cf
 </menu>
